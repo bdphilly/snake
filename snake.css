@@ -1,0 +1,28 @@
+#board {
+  width: 600px;
+  height: 600px;
+  border: red dashed 3px;
+  margin: 0px auto;
+  padding-left: 100px;
+}
+
+#board:after {
+  content: "";
+  clear: both;
+  display: block;
+
+}
+
+body {
+  text-align: center;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  float: left;
+  border: black solid 1px;
+  display: inline-block;
+
+}
