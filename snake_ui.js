@@ -4,23 +4,33 @@
 
   var View = SnakeUI.View = function (htmlEl) {
     this.$el = htmlEl;
-
-
   }
 
   View.prototype.handleKeyEvent = function (event) {
     switch(event.keyCode) {
       case 87:
-        this.snake.turn("N");
+      case 38:
+        if (this.snake.direction !== "S") {
+          this.snake.turn("N");
+        }
         break;
       case 68:
-        this.snake.turn("E");
+      case 39:
+        if (this.snake.direction !== "W") {
+          this.snake.turn("E");
+        }
         break;
       case 83:
-        this.snake.turn("S");
+      case 40:
+        if (this.snake.direction !== "N") {
+          this.snake.turn("S");
+        }
         break;
       case 65:
-        this.snake.turn("W");
+      case 37:
+        if (this.snake.direction !== "E") {
+          this.snake.turn("W");
+        }
         break;
       default:
         break;
@@ -30,8 +40,6 @@
   View.prototype.start = function () {
     this.snake = new SnakeGame.Snake();
     var view = this
-
-    // var HTML = this.snake.render();
 
     function step () {
       this.snake.render();
@@ -45,14 +53,14 @@
     });
 
     var timerId = 0;
-    // if (timerId)clearInteral(timerId)
+    
     timerId = setInterval(function () {
       view.snake.render();
       view.snake.move();
       if (view.snake.isDead) {
         clearInterval(timerId);
       }
-    }, 200);
+    }, 150);
   };
 
 })(this);

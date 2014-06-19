@@ -68,8 +68,12 @@
       default:
         break;
     }
+    if (_.uniq(this.segments).length !== this.segments.length) {
+      this.isDead = true;
+    }
+
     if (this.isDead) { 
-      this.renderDeath();
+      // this.renderDeath();
       this.isDead = true;
     }
     this.checkEating();

@@ -33,11 +33,11 @@ body {
 }
 
 .snake {
-  background-color: blue;
+  background-color: #FE303A;
 }
 
 .apple {
-  background-color: #A53B57;
+  background-color: #FFFF00;
 }
 
 .death {
