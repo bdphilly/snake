@@ -1,8 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
+
 #board {
   width: 400px;
   height: auto;
-  border: red solid 1px;
   margin: 0px auto;
+  border-width:10px; 
+  border-style:inset;
 }
 
 #board:after {
@@ -13,6 +16,8 @@
 
 body {
   text-align: center;
+  background-color: #519B71;
+  font-family: 'Gochi Hand', cursive;
 }
 
 .square {
@@ -20,8 +25,10 @@ body {
   height: 18px;
   margin: 0px auto;
   float: left;
-  border: black solid 1px;
+  border: #506C8E solid 1px;
   display: inline-block;
+  background-color: #506C8E;
+  border-radius: 2px;
 }
 
 .snake {
@@ -29,5 +36,9 @@ body {
 }
 
 .apple {
-  background-color: red;
+  background-color: #A53B57;
+}
+
+.death {
+ background-color: black; 
 }
