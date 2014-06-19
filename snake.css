@@ -1,5 +1,5 @@
 #board {
-  width: 425px;
+  width: 400px;
   height: auto;
   border: red solid 1px;
   margin: 0px auto;
@@ -16,11 +16,18 @@ body {
 }
 
 .square {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   margin: 0px auto;
   float: left;
   border: black solid 1px;
   display: inline-block;
 }
 
+.snake {
+  background-color: blue;
+}
+
+.apple {
+  background-color: red;
+}

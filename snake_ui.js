@@ -32,11 +32,18 @@
     //makes snake turn
     var view = this
 
+    // function step () {
+    //   var asciiHTML = this.board.render();
+    //   this.board.snake.move();
+    //   this.$el.empty();
+    //   this.$el.append(asciiHTML);
+    // }
+
+    var HTML = this.board.render();
+
     function step () {
-      var asciiHTML = this.board.render();
+      var HTML = this.board.render();
       this.board.snake.move();
-      this.$el.empty();
-      this.$el.append(asciiHTML);
     }
 
     $(document).ready(function() {
@@ -45,12 +52,7 @@
       });
     });
 
-
-
-    setInterval(step.bind(this), 500);
+    setInterval(step.bind(this), 300);
   };
-
-
-
 
 })(this);
