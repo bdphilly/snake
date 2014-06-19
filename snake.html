@@ -8,20 +8,28 @@
   <script type="text/javascript" src="underscore.js"></script>
   <script type="text/javascript" src="snake.js"></script>
   <script type="text/javascript" src="snake_ui.js"></script>
-
-
 </head>
-
 
 <body>
   <h1>Play Snake!</h1>
   <div id="board">
 
   </div>
-  <script>
-    var view = new window.SnakeGame.SnakeUI.View($('#board'));
-    view.start();
-  </script>
+
+
+  
+
+
+
 </body>
 
 </html>
+
+  <script>
+    _.times(500, function () {
+      $('#board').append('<div class="square"></div>');
+    });
+
+    // var view = new window.SnakeGame.SnakeUI.View($('#board'));
+    // view.start();
+  </script>
