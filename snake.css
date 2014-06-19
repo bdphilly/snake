@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
+
+#board {
+  width: 400px;
+  height: auto;
+  margin: 0px auto;
+  border-width:10px; 
+  border-style:inset;
+}
+
+#board:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body {
+  text-align: center;
+  background-color: #519B71;
+  font-family: 'Gochi Hand', cursive;
+  color: #1801DF;
+}
+
+.square {
+  width: 18px;
+  height: 18px;
+  margin: 0px auto;
+  float: left;
+  border: #506C8E solid 1px;
+  display: inline-block;
+  background-color: #506C8E;
+  border-radius: 2px;
+}
+
+.snake {
+  background-color: #FE303A;
+}
+
+.apple {
+  background-color: #FFFF00;
+}
+
+.death {
+ background-color: #FE303A; 
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 42px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Snake!</title>
+  <link rel="stylesheet" href="snake.css" type="text/css" charset="utf-8">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="underscore.js"></script>
+  <script type="text/javascript" src="snake.js"></script>
+  <script type="text/javascript" src="snake_ui.js"></script>
+
+</head>
+
+<body>
+  <h1>it's Snake!</h1>
+  <div id="board">
+  
+  </div>
+  <br>
+
+  <h2>use A,W,D,S or arrow keys to move your snake</h2>
+  <h2>SPACEBAR to start/restart game</h2>
+  
+</body>
+
+</html>
+
+<script>
+
+for (var i = 0; i < 400; i++) {
+  $('#board').append("<div class='square' data-id='" + i + "'></div>");    
+}
+
+$('body').keyup(function(e){
+  if(e.keyCode == 32){
+    var view = new window.SnakeGame.SnakeUI.View($('#board'));
+    view.start();
+  }
+});
+
+$('#board').click(function () {
+  alert('clicked!');
+});
+
+</script>
