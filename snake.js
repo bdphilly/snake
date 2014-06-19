@@ -7,7 +7,7 @@
     this.segments = [startLink];
     this.isDead = false;
     this.board = board;
-    this.apple = 50;
+    this.apple = _.random(0, 399);
   };
 
   var Board = SnakeGame.Board = function () {
@@ -99,6 +99,4 @@
     }
   };
 
-
 })(this);
-
