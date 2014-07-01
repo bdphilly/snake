@@ -20,6 +20,9 @@
 
   <h2>use A,W,D,S or arrow keys to move your snake</h2>
   <h2>SPACEBAR to start/restart game</h2>
+  <h3>
+    For optimal performance, please make sure your browser is sized to 100%
+  </h3>
   
 </body>
 
@@ -36,10 +39,6 @@ $('body').keyup(function(e){
     var view = new window.SnakeGame.SnakeUI.View($('#board'));
     view.start();
   }
-});
-
-$('#board').click(function () {
-  alert('clicked!');
 });
 
 </script>
